@@ -72,7 +72,8 @@ for template in templates:
     content = content.replace("{{MASTER_VERSION}}", version)
     content = content.replace("{{MASTER_AUTHOR}}", author)
 
-    out_name = template.replace(".template", "")
+    out_name = template.replace(".template.js", ".js")
+    out_name = out_name.replace(".template.css", ".user.css")
     out_path = f"{out_name}"
 
     with open(out_path, "w", encoding="utf-8") as f:
