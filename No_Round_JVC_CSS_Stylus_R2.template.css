@@ -1,0 +1,28 @@
+/* ==UserStyle==
+@name           UI_2023_JVC
+@namespace      https://www.jeuxvideo.com
+@version        {{MASTER_VERSION}}
+@updateURL      https://userstyles.world/api/style/17542.user.css
+@description    Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC).
+@author         {{MASTER_AUTHOR}}
+@license        CC0-1.0
+@preprocessor   stylus
+
+@var checkbox bar-top-mov      "Barre edition en haut (reversible)" 1
+@var checkbox hide__topInfo    "Masquer le bandeau harcelement (reversible)" 1
+
+==/UserStyle== */
+@-moz-document domain("www.jeuxvideo.com") {
+/* IMPORT MASTER [[No_Round_JVC_CSS--Part1]] */
+
+    if (bar-top-mov) {
+        /* IMPORT MASTER [[No_Round_JVC_CSS--Toogle1]] */
+    }
+
+    if (hide__topInfo) {
+        /* IMPORT MASTER [[No_Round_JVC_CSS--Toogle2]] */
+    }
+
+/* IMPORT MASTER [[No_Round_JVC_CSS--Part2]] */
+}
+
