@@ -21,8 +21,7 @@ style.textContent = `
 
     /* masque icone discord + le layout fav */
     /* .tabs.btn-group > a[href*="risibank.fr"], */
-    .card-body ~ .favorite-heart,
-    .card-body ~ .bookmark,
+    .media-preview .card-body ~ *,
     .fa-discord {
         display: none !important;
     }
