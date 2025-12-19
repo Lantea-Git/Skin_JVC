@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Clean_Pub_Risi_JVC
 // @namespace    Clean_Pub_Risi_JVC
-// @version      7.2.4
+// @version      7.2.5
 // @description  Vire les onglets secondaires dans risibank.
 // @author       Atlantis
 // @match        *://risibank.fr/embed*
@@ -21,7 +21,8 @@ style.textContent = `
 
     /* masque icone discord + le layout fav */
     /* .tabs.btn-group > a[href*="risibank.fr"], */
-    .media-preview .card-body ~ *,
+    .card-body ~ .favorite-heart,
+    .card-body ~ .bookmark,
     .fa-discord {
         display: none !important;
     }
