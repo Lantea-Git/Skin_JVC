@@ -5,21 +5,6 @@
 
 /* Author: Atlantis */
 
-/* PART START: [[Clean_Pub_Risi_JVC_CSS]] */
-
-    /* reduit marge en haut */
-    .themed-container > .mt-4{margin-top: 0px !important }
-
-    /* masque icone discord + le layout fav */
-    /* .tabs.btn-group > a[href*="risibank.fr"], */
-    .card-body ~ .favorite-heart,
-    .card-body ~ .bookmark,
-    .fa-discord {
-        display: none !important;
-    }
-
-/* PART END */
-
 
 /* PART START: [[No_Round_JVC_CSS--Part1]] */
 
@@ -310,4 +295,19 @@
     .card--cover .card__contentType {
         border-radius: 0.4rem !important;
     }
+/* PART END */
+
+/* PART START: [[Clean_Pub_Risi_JVC_CSS]] */
+
+    /* reduit marge en haut */
+    .themed-container > .mt-4{margin-top: 0px !important }
+
+    /* masque icone discord + le layout fav */
+    /* .tabs.btn-group > a[href*="risibank.fr"], */
+    .card-body ~ .favorite-heart,
+    .card-body ~ .bookmark,
+    .fa-discord {
+        display: none !important;
+    }
+
 /* PART END */
