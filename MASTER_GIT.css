@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.2.5 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.2.5 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.2.6 */
 
 /* Author: Atlantis */
 
@@ -71,6 +71,8 @@
     .survey__icon,
     .postMessage__loader,
     .postMessage__icon,
+    /*PUB*/
+    .js-layout-adHeader,
     .layout__videoFooter,
     .sponsoTab__link,
     .newsletter-popin-modal,
