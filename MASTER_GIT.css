@@ -1,6 +1,6 @@
 /* Master */
 
-/* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.2.5 */
+/* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.2.6 */
 /* VERSION [[No_Round_JVC_CSS]]      : 7.2.6 */
 
 /* Author: Atlantis */
@@ -310,6 +310,10 @@
     .card-body ~ .bookmark,
     .fa-discord {
         display: none !important;
+    }
+    /* masque icone risibank sur petit ecran (410px) */
+    @media(max-width: 410px) {
+        .tabs.btn-group > a[href^="https://risibank.fr"] { display : none !important; }
     }
 
 /* PART END */
