@@ -21,5 +21,5 @@ style.textContent = `
 
 /* IMPORT MASTER [[No_Round_JVC_CSS--Part2]] */
 `;
-document.head.append(style);
-
+if (document.head) document.head.append(style);
+else setTimeout(() => document.head.append(style), 300);
