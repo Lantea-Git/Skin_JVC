@@ -8,14 +8,14 @@
 @license        CC0-1.0
 @preprocessor   stylus
 
-@var checkbox bar-top-mov      "Barre edition en haut (reversible)" 1
+@var checkbox bar_top_mov      "Barre edition en haut (reversible)" 1
 @var checkbox hide__topInfo    "Masquer le bandeau harcelement (reversible)" 1
 
 ==/UserStyle== */
 @-moz-document domain("www.jeuxvideo.com") {
 /* IMPORT MASTER [[No_Round_JVC_CSS--Part1]] */
 
-    if (bar-top-mov) {
+    if (bar_top_mov) {
         /* IMPORT MASTER [[No_Round_JVC_CSS--Toogle1]] */
     }
 
