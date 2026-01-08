@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.3.1 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.3.2 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.3.3 */
 
 /* Author: Atlantis */
 
@@ -126,6 +126,9 @@
         border-radius: 0.3rem !important;
     }
 
+    .message__urlImg {
+        margin-bottom: 0;
+    }
 
     .topic-list {
         border-radius: 0.3rem;
