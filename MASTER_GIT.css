@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.3.1 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.4.0 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.4.1 */
 
 /* Author: Atlantis */
 
@@ -230,6 +230,10 @@
         border-color: #5cb85c
     }
     */
+
+    #blacklist li {
+        border-radius : 0.4rem ;
+    }
 
     .liste-profil-general .profile-link {
         border-radius: 0.4rem !important;
