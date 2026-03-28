@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Clean_Pub_Risi_JVC
 // @namespace    Clean_Pub_Risi_JVC
-// @version      7.3.1
+// @version      7.4.6
 // @description  Vire les onglets secondaires dans risibank.
 // @author       Atlantis
 // @match        *://risibank.fr/embed*
@@ -25,9 +25,16 @@ style.textContent = `
     .fa-discord {
         display: none !important;
     }
-    /* masque icone risibank sur petit ecran (410px) */
-    @media(max-width: 410px) {
-        .tabs.btn-group > a[href^="https://risibank.fr"] { display : none !important; }
+    /* masque icone risibank sur petit ecran (430px) */
+    @media(max-width: 430px) {
+        .tabs.btn-group > a[href^="https://risibank.fr"] { 
+            display : none !important; 
+        }
+        /*Marges sur petit ecran reduites*/
+        .themed-container.px-3 {
+            padding-right: 0.2rem !important;
+            padding-left: 0.2rem !important;
+        }
     }
 
 `;
