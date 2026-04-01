@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.4.6 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.4.6 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.4.7 */
 
 /* Author: Atlantis */
 
@@ -77,7 +77,8 @@
     .sponsoTab__link,
     .newsletter-popin-modal,
     /* .header__navItem--lvl1:nth-child(3), */
-    .ads.anchorWrapper.js-tracking-widget {
+    .ads.anchorWrapper.js-tracking-widget,
+    .headerSearch__autocompleteItem.js-tracking-widget {
         display: none;
     }
 
