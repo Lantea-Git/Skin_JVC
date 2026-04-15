@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.5.2 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.5.5 */
 
 /* Author: Atlantis */
 
@@ -12,13 +12,16 @@
 
     /* Buttons */
     .buttonsNavbar__button,
-    .buttonsNavbar,
     .btn {
         border-radius: 5.5px;
     }
 
     .buttonsNavbar {
         box-shadow: none;
+        border-radius: 0;
+        border: 0;
+        background: none;
+        border-bottom: 0.1rem solid var(--jv-border-color);
     }
 
     .userParameters {
@@ -64,7 +67,9 @@
     }
 
     .form-select,
-    .form-control {
+    .form-control,
+    .report__select,
+    .report__textarea {
         border-radius: 0.4rem;
     }
 
@@ -353,7 +358,29 @@
         border-radius: 0;
     }
 
+    .userCount__icon,
+    .userCount__number {
+        color: var(--jv-blue-gray-color);
+    }
+
+    .surveyResults__icon,
+    .surveyResults__count {
+        color: var(--jv-blue-gray-color);
+    }
+
+    .surveyResults__toggleButton, 
+    .surveyResults__progressFill {
+        background: var(--jv-blue-gray-color);
+        border : none;
+    }
+
+    .messageUser__card {
+        display :flex;
+        flex-direction: column;
+    }
+
     .card,
+    .surveyResults,
     .sideCardForum__body {
         border-radius: 0.3rem !important;
     }
