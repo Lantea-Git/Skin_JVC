@@ -1,12 +1,18 @@
-/* Master */
+/* ==UserStyle==
+@name           UI_2023_JVC
+@namespace      https://www.jeuxvideo.com
+@version        7.5.1
+@updateURL      https://userstyles.world/api/style/17542.user.css
+@description    Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC).
+@author         Atlantis
+@license        CC0-1.0
+@preprocessor   stylus
 
-/* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.5.1 */
+@var checkbox bar_top_mov      "Barre edition en haut (reversible)" 1
+@var checkbox hide__topInfo    "Masquer le bandeau harcelement (reversible)" 1
 
-/* Author: Atlantis */
-
-
-/* PART START: [[No_Round_JVC_CSS--Part1]] */
+==/UserStyle== */
+@-moz-document domain("www.jeuxvideo.com") {
 
     /* CODE */
 
@@ -107,9 +113,8 @@
     .messageEditor__containerEdit {
         display: grid;
     }
-/* PART END */
 
-/* PART START: [[No_Round_JVC_CSS--Toogle1]] */
+    if (bar_top_mov) {
         .messageEditor__buttonEdit {
             order: -1;
             border-top: none;
@@ -124,15 +129,14 @@
         .buttonsEditor {
             margin: 0 0.625rem;
         }
-/* PART END */
+    }
 
-/* PART START: [[No_Round_JVC_CSS--Toogle2]] */
+    if (hide__topInfo) {
         .messageEditor__topInfo {
             display: none;
         }
-/* PART END */
+    }
 
-/* PART START: [[No_Round_JVC_CSS--Part2]] */
     .messageEditor__containerPreview {
         background-color: inherit;
         border-radius: 0.3rem !important;
@@ -360,29 +364,5 @@
     .card--cover .card__contentType {
         border-radius: 0.4rem !important;
     }
-/* PART END */
+}
 
-/* PART START: [[Clean_Pub_Risi_JVC_CSS]] */
-
-    /* reduit marge en haut */
-    .themed-container > .mt-4{margin-top: 0px !important }
-
-    /* masque icone discord + le layout fav */
-    .favorite-heart,
-    .bookmark,
-    .fa-discord {
-        display: none !important;
-    }
-    /* masque icone risibank sur petit ecran (430px) */
-    @media(max-width: 430px) {
-        .tabs.btn-group > a[href^="https://risibank.fr"] { 
-            display : none !important; 
-        }
-        /*Marges sur petit ecran reduites*/
-        .themed-container.px-3 {
-            padding-right: 0.2rem !important;
-            padding-left: 0.2rem !important;
-        }
-    }
-
-/* PART END */
