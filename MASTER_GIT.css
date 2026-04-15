@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.5.0 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.5.1 */
 
 /* Author: Atlantis */
 
@@ -27,6 +27,14 @@
 
     .valider-modif-profil {
         border-radius: 0.3rem;
+    }
+
+    #js-list-message-tools-actions {
+        position: static;
+        order: 2;
+    }
+    #js-list-topics-tools-actions {
+        position: static;
     }
 
     .toast,
