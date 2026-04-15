@@ -1,7 +1,7 @@
 /* Master */
 
-/* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.4.9 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.4.7 */
+/* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.5.0 */
 
 /* Author: Atlantis */
 
@@ -11,6 +11,8 @@
     /* CODE */
 
     /* Buttons */
+    .buttonsNavbar__button,
+    .buttonsNavbar,
     .btn {
         border-radius: 5.5px;
     }
@@ -129,7 +131,20 @@
     }
 
     .message__urlImg {
+        max-width: 250px;
+        max-height: 250px;
+        border-radius: 0;
         margin-bottom: 0;
+    }
+
+    .messageUser__actionIcon {
+        font-size: 1.2rem;
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+
+    .messageUser__footer {
+        height: 1.5rem;
     }
 
     .topic-list {
@@ -140,8 +155,22 @@
         border-radius: 0.3rem;
     }
 
-    .bloc-message-forum {
+    #forums-info-app + .sideCardForum {
+        display : none;
+    }
+
+    .bloc-message-forum
+    .messageUser__card {
         border-radius: 0.3rem;
+    }
+
+    .messageUser .avatar {
+       width: 3.4rem;
+       height: 3.4rem;
+    }
+    
+    .messageUser__label {
+        font-size: 0.95rem;
     }
 
     /*
@@ -174,7 +203,16 @@
         border-top-left-radius: 0.3rem !important;
         border-bottom-left-radius: 0.3rem !important;
     }
-
+    .forumSearchBar__form {
+    --search-border-radius: 0.3rem 0.3rem 0 0;
+    }
+    @media (min-width: 612px) {
+        .forumSearchBar__form {
+            --search-border-radius: 0.3rem;
+            box-shadow: none;
+            border-color: var(--jv-input-border-color) !important;
+        }
+    }
     .searchBar__form {
         border-radius: 0.4rem ;
     }
@@ -303,7 +341,8 @@
         border-radius: 0;
     }
 
-    .card {
+    .card,
+    .sideCardForum__body {
         border-radius: 0.3rem !important;
     }
 
