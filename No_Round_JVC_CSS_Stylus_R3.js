@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UI_2023_JVC_JS
 // @namespace    UI_2023_JVC_JS
-// @version      7.6.3
+// @version      7.6.4
 // @description  Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC) (JS).
 // @author       Atlantis
 // @match        *://www.jeuxvideo.com/*
@@ -48,6 +48,11 @@ style.textContent = `
     #js-list-topics-tools-actions {
         position: static;
         order: 0 !important;
+        margin-bottom: 15px;
+    }
+
+    .js-pagination-top.container__pagination {
+        margin-bottom: 15px;
     }
 
     .toast,
@@ -85,6 +90,10 @@ style.textContent = `
 
     .imageUploadEditor__preview {
         border-radius: 0.2rem;
+    }
+
+    .pagination__navigation {
+        gap: 0.325rem 0.625rem;
     }
 
     .pagination__button--isHideMobile, 
