@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.6.1 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.6.2 */
 
 /* Author: Atlantis */
 
@@ -185,10 +185,15 @@
         border-radius: 0.3rem;
     }
 
+    .tablesForum__subjectText {
+        font-weight: 700;
+    }
+
     #forums-info-app + .sideCardForum {
         display : none;
     }
 
+    .lockInfo,
     .bloc-message-forum
     .messageUser__card {
         border-radius: 0.3rem;
