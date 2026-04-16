@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.5.8 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.6.0 */
 
 /* Author: Atlantis */
 
@@ -399,6 +399,23 @@
     .surveyResults,
     .sideCardForum__body {
         border-radius: 0.3rem !important;
+    }
+
+    .message__spoilLabel,
+    .message__spoilContent {
+        border-radius:0.2rem;
+    }
+
+    @media (max-width: 999px) {
+        .container__main {
+            padding: 0 0.625rem;
+        }
+    }
+
+    @media (max-width: 999px) {
+        .sideCardForum {
+            padding: 0 0.625rem;
+        }
     }
 
     /*homepage = card--default*/
