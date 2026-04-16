@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           UI_2023_JVC
 @namespace      https://www.jeuxvideo.com
-@version        7.6.1
+@version        7.6.2
 @updateURL      https://userstyles.world/api/style/17542.user.css
 @description    Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC).
 @author         Atlantis
@@ -189,10 +189,15 @@
         border-radius: 0.3rem;
     }
 
+    .tablesForum__subjectText {
+        font-weight: 700;
+    }
+
     #forums-info-app + .sideCardForum {
         display : none;
     }
 
+    .lockInfo,
     .bloc-message-forum
     .messageUser__card {
         border-radius: 0.3rem;
