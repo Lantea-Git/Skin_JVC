@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.5.5 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.5.6 */
 
 /* Author: Atlantis */
 
@@ -79,6 +79,21 @@
 
     .imageUploadEditor__preview {
         border-radius: 0.2rem;
+    }
+
+    .pagination__button--isHideMobile, 
+    .pagination__item--isHideMobile {
+        border: 0;
+        background: none !important;
+        color: var(--jv-link-color);
+    }
+
+    #forums-info-app .sideCardForum__listItemAvatar {
+        display: none;
+    }
+
+    .titleMessagesUsers__title {
+        font-size: 1.8rem;
     }
 
     /* Forums */
