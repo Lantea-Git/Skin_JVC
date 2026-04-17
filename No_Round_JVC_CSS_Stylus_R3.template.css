@@ -10,6 +10,7 @@
 
 @var checkbox bar_top_mov      "Barre edition en haut (reversible)" 1
 @var checkbox hide__topInfo    "Masquer le bandeau harcelement (reversible)" 1
+@var checkbox bar_top_bloc     "Barre bloc forum en haut (reversible)" 1
 
 ==/UserStyle== */
 @-moz-document domain("www.jeuxvideo.com") {
@@ -21,6 +22,10 @@
 
     if (hide__topInfo) {
         /* IMPORT MASTER [[No_Round_JVC_CSS--Toogle2]] */
+    }
+
+    if (bar_top_bloc) {
+        /* IMPORT MASTER [[No_Round_JVC_CSS--Toogle3]] */
     }
 
 /* IMPORT MASTER [[No_Round_JVC_CSS--Part2]] */
