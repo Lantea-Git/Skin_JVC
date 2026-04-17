@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.8.0 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.8.1 */
 
 /* Author: Atlantis */
 
@@ -265,7 +265,7 @@
     }
 
     .lockInfo,
-    .bloc-message-forum
+    .bloc-message-forum,
     .messageUser__card {
         border-radius: 0.3rem;
     }
