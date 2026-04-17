@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.8.3 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.8.5 */
 
 /* Author: Atlantis */
 
@@ -89,12 +89,12 @@
         gap: 0.325rem 0.625rem;
     }
 
-    .pagination__button:not(.pagination__button--light) {
+    .pagination__button:not(.pagination__button--light):not(.pagination__button--current) {
         border: 0;
         background: none !important;
         color: var(--jv-link-color);
     }
-    .pagination__button:not(.pagination__button--light):hover {
+    .pagination__button:not(.pagination__button--light):not(.pagination__button--current):hover {
         color: var(--jv-text-hover-secondary);
     }
 
