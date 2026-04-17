@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           UI_2023_JVC
 @namespace      https://www.jeuxvideo.com
-@version        7.6.5
+@version        7.7.1
 @updateURL      https://userstyles.world/api/style/17542.user.css
 @description    Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC).
 @author         Atlantis
@@ -169,6 +169,26 @@
         }
     }
 
+
+    .tablesForum__cellAuthor .tablesForum__remainingAvatars,
+    .tablesForum__cellAuthor .tablesForum__separator {
+        display: none !important;
+    }
+
+    .tablesForum__cellText,
+    .tablesForum__cellLink,
+    .tablesForum__cellAuthor {
+        font-size: 14px;
+    }
+
+   .tablesForum {
+        border-radius: 0.3rem;
+    }
+
+    .tablesForum__subjectText {
+        font-weight: 500;
+    }
+
     .messageEditor__containerPreview {
         background-color: inherit;
         border-radius: 0.3rem !important;
@@ -195,14 +215,6 @@
         border-radius: 0.3rem;
     }
 
-    .tablesForum {
-        border-radius: 0.3rem;
-    }
-
-    .tablesForum__subjectText {
-        font-weight: 500;
-    }
-
     #forums-info-app + .sideCardForum {
         display : none;
     }
@@ -222,12 +234,9 @@
         font-size: 0.95rem;
     }
 
-    /*
-    .bloc-message-forum.mx-2 {
-        margin-right: 0 !important;
-        margin-left: 0 !important;
+    .avatar--moderator {
+        --shadow-color: none;
     }
-    */
 
     .nouveau-msg > a {
         border-radius: 0.3rem !important;
@@ -361,6 +370,7 @@
         border-radius: 0.3rem;
     }
 
+    /*Legacy START*/
     .bloc-pagi-default .pagi-debut-actif,
     .bloc-pagi-default .pagi-fin-actif,
     .bloc-pagi-default .pagi-precedent-actif,
@@ -377,6 +387,7 @@
         display: flex;
         justify-content: center;
     }
+    /*Legacy END*/
 
     /* Cards */
 
@@ -405,11 +416,6 @@
     .surveyResults__progressFill {
         background: var(--jv-blue-gray-color);
         border : none;
-    }
-
-    .messageUser__card {
-        display :flex;
-        flex-direction: column;
     }
 
     .card,

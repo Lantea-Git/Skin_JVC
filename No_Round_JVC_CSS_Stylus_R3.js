@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UI_2023_JVC_JS
 // @namespace    UI_2023_JVC_JS
-// @version      7.6.5
+// @version      7.7.1
 // @description  Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC) (JS).
 // @author       Atlantis
 // @match        *://www.jeuxvideo.com/*
@@ -163,6 +163,26 @@ style.textContent = `
             margin: 0 0.625rem;
         }
 
+
+    .tablesForum__cellAuthor .tablesForum__remainingAvatars,
+    .tablesForum__cellAuthor .tablesForum__separator {
+        display: none !important;
+    }
+
+    .tablesForum__cellText,
+    .tablesForum__cellLink,
+    .tablesForum__cellAuthor {
+        font-size: 14px;
+    }
+
+   .tablesForum {
+        border-radius: 0.3rem;
+    }
+
+    .tablesForum__subjectText {
+        font-weight: 500;
+    }
+
     .messageEditor__containerPreview {
         background-color: inherit;
         border-radius: 0.3rem !important;
@@ -189,14 +209,6 @@ style.textContent = `
         border-radius: 0.3rem;
     }
 
-    .tablesForum {
-        border-radius: 0.3rem;
-    }
-
-    .tablesForum__subjectText {
-        font-weight: 500;
-    }
-
     #forums-info-app + .sideCardForum {
         display : none;
     }
@@ -216,12 +228,9 @@ style.textContent = `
         font-size: 0.95rem;
     }
 
-    /*
-    .bloc-message-forum.mx-2 {
-        margin-right: 0 !important;
-        margin-left: 0 !important;
+    .avatar--moderator {
+        --shadow-color: none;
     }
-    */
 
     .nouveau-msg > a {
         border-radius: 0.3rem !important;
@@ -355,6 +364,7 @@ style.textContent = `
         border-radius: 0.3rem;
     }
 
+    /*Legacy START*/
     .bloc-pagi-default .pagi-debut-actif,
     .bloc-pagi-default .pagi-fin-actif,
     .bloc-pagi-default .pagi-precedent-actif,
@@ -371,6 +381,7 @@ style.textContent = `
         display: flex;
         justify-content: center;
     }
+    /*Legacy END*/
 
     /* Cards */
 
@@ -399,11 +410,6 @@ style.textContent = `
     .surveyResults__progressFill {
         background: var(--jv-blue-gray-color);
         border : none;
-    }
-
-    .messageUser__card {
-        display :flex;
-        flex-direction: column;
     }
 
     .card,
