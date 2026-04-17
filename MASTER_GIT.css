@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.8.6 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.8.7 */
 
 /* Author: Atlantis */
 
@@ -197,7 +197,7 @@
     }
 
     /*TEMPLATE MOBILE*/
-    @media (max-width: 611.98px), (min-width: 1000px) and (max-width: 1449px) {
+    @media (max-width: 611.98px) {
         .tablesForum__headRow,
         .tablesForum__bodyRow {
           grid-template-columns: auto 1fr auto auto !important;
