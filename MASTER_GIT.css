@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.8.1 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.8.2 */
 
 /* Author: Atlantis */
 
@@ -200,14 +200,18 @@
 
     /*TEMPLATE MOBILE*/
     @media (max-width: 611.98px), (min-width: 1000px) and (max-width: 1449px) {
-         .tablesForum__headRow,
-         .tablesForum__bodyRow {
-           grid-template-columns: auto 1fr auto auto !important;
-         }
+        .tablesForum__headRow,
+        .tablesForum__bodyRow {
+          grid-template-columns: auto 1fr auto auto !important;
+        }
 
-         .tablesForum__cellText {
-             grid-column: 1;
-         }
+        .tablesForum__cellText {
+            grid-column: 1;
+        }
+
+        .tablesForum--isModeCompact .tablesForum__bodyRow {
+            --tables-forums-padding: 0.3125rem 1.5rem;
+        }
 
          .tablesForum__cellLink {
              grid-column: 2;
