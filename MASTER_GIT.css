@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.8.5 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.8.6 */
 
 /* Author: Atlantis */
 
@@ -281,8 +281,13 @@
         font-size: 0.95rem;
     }
 
-    .avatar {
-        --shadow-color: none;
+    .avatar--with-animation {
+       box-shadow: none;
+    }
+
+    .avatar--with-animation:before {
+        background: var(--shadow-color);
+        animation : none;
     }
 
     .nouveau-msg > a {
