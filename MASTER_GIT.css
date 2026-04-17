@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.7.2 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.7.4 */
 
 /* Author: Atlantis */
 
@@ -191,6 +191,28 @@
     .tablesForum__cellAuthor .tablesForum__remainingAvatars,
     .tablesForum__cellAuthor .tablesForum__separator {
         display: none !important;
+    }
+
+    /*TEMPLATE MOBILE*/
+    @media (max-width: 611.98px), (min-width: 1000px) and (max-width: 1449px) {
+         .tablesForum__headRow,
+         .tablesForum__bodyRow {
+           grid-template-columns: auto 1fr auto auto !important;
+         }
+
+         .tablesForum__cellText {
+             grid-column: 1;
+         }
+
+         .tablesForum__cellLink {
+             grid-column: 2;
+             grid-row: 3;
+             text-align: right;
+         }
+
+         .tablesForum__cellLink::before {
+             content : none;
+         }
     }
 
     .tablesForum__cellText,
