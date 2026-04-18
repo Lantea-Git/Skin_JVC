@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.8.8 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.8.9 */
 
 /* Author: Atlantis */
 
@@ -268,6 +268,10 @@
 
     #forums-info-app + .sideCardForum {
         display : none;
+    }
+
+    .sideCardForum__listItem {
+        line-height: 1em;
     }
 
     .lockInfo,
