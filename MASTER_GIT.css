@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.9.0 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.9.1 */
 
 /* Author: Atlantis */
 
@@ -252,7 +252,7 @@
         margin-bottom: 0;
     }
 
-    .messageUser__actionIcon {
+    ..messageUser__card .messageUser__actionIcon {
         font-size: 1.2rem;
         height: 1.2rem;
         width: 1.2rem;
