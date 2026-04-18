@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.8.7 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.8.8 */
 
 /* Author: Atlantis */
 
@@ -44,8 +44,12 @@
         margin-bottom: 15px;
     }
 
-    .js-pagination-top.container__pagination {
+    .container__pagination {
         margin-bottom: 15px;
+    }
+
+    .container__post > .container__postTitle {
+        display : none;
     }
 
     .toast,
