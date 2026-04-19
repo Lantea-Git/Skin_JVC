@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.9.5 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.9.7 */
 
 /* Author: Atlantis */
 
@@ -471,6 +471,10 @@
     .userCount__icon,
     .userCount__number {
         color: var(--jv-blue-gray-color);
+    }
+
+    .userCount__icon {
+        font-size : 1.1rem;
     }
 
     .surveyResults__icon,
