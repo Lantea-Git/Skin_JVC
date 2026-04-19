@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 8.0.1 */
+/* VERSION [[No_Round_JVC_CSS]]      : 8.0.2 */
 
 /* Author: Atlantis */
 
@@ -346,6 +346,10 @@
     }
     .searchBar__form {
         border-radius: 0.4rem ;
+    }
+
+    #list-topics-search-result .lockInfo__icon {
+        visibility : hidden;
     }
 
     /* Profil */
