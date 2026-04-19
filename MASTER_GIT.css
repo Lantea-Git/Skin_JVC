@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.9.7 */
+/* VERSION [[No_Round_JVC_CSS]]      : 8.0.0 */
 
 /* Author: Atlantis */
 
@@ -263,6 +263,16 @@
         height: 1.2rem;
         width: 1.2rem;
     }
+
+    /* --FIX -- STA --- --*/
+    /* !! FIX BUG POPPING REACT CSS LAYOUT !! */
+    .messageUser > .messageUser__groupFills {
+        display : none;
+    }
+    .messageUser .avatar--with-animation {
+        padding: 0;
+    }
+    /* --FIX -- END ------*/
 
     .messageUser__footer {
         height: 1.5rem;
