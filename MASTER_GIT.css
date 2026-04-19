@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 7.9.4 */
+/* VERSION [[No_Round_JVC_CSS]]      : 7.9.5 */
 
 /* Author: Atlantis */
 
@@ -22,6 +22,8 @@
         border: 0;
         background: none;
         border-bottom: 0.1rem solid var(--jv-border-color);
+        max-height: 55px;
+        padding-bottom : 15px;
     }
 
     .topicResolve,
