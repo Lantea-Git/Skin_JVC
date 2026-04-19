@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 8.0.2 */
+/* VERSION [[No_Round_JVC_CSS]]      : 8.0.3 */
 
 /* Author: Atlantis */
 
@@ -208,7 +208,7 @@
     }
 
     /*TEMPLATE PETIT ECRAN -- FROM RISIBANK*/
-    @media (min-width: 1200px) {
+    @media (min-width: 1200px) and (max-width: 1450px) { /* Max for fellback debou*/
         .layout {
             --grid-template-columns: 1fr 49rem 24.5rem 1fr;
         }
