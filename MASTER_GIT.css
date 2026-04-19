@@ -16,6 +16,11 @@
         border-radius: 5.5px;
     }
 
+    .dropdownCustom__list,
+    #mp .dropdown-menu {
+        border-radius : 0.4rem;
+    }
+
     .buttonsNavbar {
         box-shadow: none;
         border-radius: 0;
