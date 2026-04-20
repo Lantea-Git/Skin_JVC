@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 8.0.3 */
+/* VERSION [[No_Round_JVC_CSS]]      : 8.0.5 */
 
 /* Author: Atlantis */
 
@@ -297,14 +297,19 @@
        width: 3.4rem;
        height: 3.4rem;
     }
-    
-    .messageUser__label {
-        font-size: 0.95rem;
-    }
 
     .avatar--with-animation {
        box-shadow: none;
     }
+    
+    .messageUser__label {
+        font-size: 0.98rem;
+    }
+
+    .messageUser__level {
+        color : var(--jv-text-muted-color);
+    }
+
 
     .avatar--with-animation:before {
         background: var(--shadow-color);
