@@ -1,0 +1,28 @@
+name: Générer No_Round_JVC_CSS_Stylus_R3.js automatiquement
+#.github/workflows/generate-js--new.yml
+on:
+  push:
+    paths:
+      - '*JVC*Stylus_*.css'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build_js:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cloner le dépôt
+        uses: actions/checkout@v6
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Lancer le script Python pour générer le .js
+        run: python build.py
+      - name: Commit et push si le fichier .js a changé
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add ui_2023_jvc_js.js
+          git diff --cached --quiet || git commit -m "$(git log -1 --pretty=%s) (JVC JS Update)"
+          git push
