@@ -23,6 +23,6 @@ jobs:
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add ui_2023_jvc_js.js
+          git add *.js
           git diff --cached --quiet || git commit -m "$(git log -1 --pretty=%s) (JVC JS Update)"
           git push
