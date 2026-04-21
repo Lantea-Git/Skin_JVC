@@ -1,7 +1,7 @@
 /* Master */
 
 /* VERSION [[Clean_Pub_Risi_JVC_CSS]]: 7.5.0 */
-/* VERSION [[No_Round_JVC_CSS]]      : 8.0.7 */
+/* VERSION [[No_Round_JVC_CSS]]      : 8.0.8 */
 
 /* Author: Atlantis */
 
@@ -305,6 +305,7 @@
     }
     
     .messageUser__label {
+        font-weight : 500;
         font-size: 0.97rem;
     }
 
