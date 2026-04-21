@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           UI_2023_JVC
 @namespace      https://www.jeuxvideo.com
-@version        8.1.0
+@version        8.1.1
 @updateURL      https://userstyles.world/api/style/17542.user.css
 @description    Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC).
 @author         Atlantis
@@ -13,7 +13,7 @@
 @var checkbox bar_top_bloc     "Barre bloc forum en haut (reversible)" 1
 
 ==/UserStyle== */
-@-moz-document domain("www.jeuxvideo.com") {
+@-moz-document domain("www.jeuxvideo.com") {  /* JSCSS-DEL-LINE */
 
     /* CODE */
 
@@ -161,7 +161,7 @@
         display: grid;
     }
 
-    if (bar_top_mov) {
+    if (bar_top_mov) { /*JSCSS-DEL-LINE*/
         .messageEditor__buttonEdit {
             order: -1;
             border-top: none;
@@ -176,15 +176,17 @@
         .buttonsEditor {
             margin: 0 0.625rem;
         }
-    }
+    }   /*JSCSS-DEL-LINE*/
 
+    /* JSCSS-DEL-BLOCK-START */
     if (hide__topInfo) {
         .messageEditor__topInfo {
             display: none;
         }
     }
+	/* JSCSS-DEL-BLOCK-END */
 
-    if (bar_top_bloc) {
+    if (bar_top_bloc) { /*JSCSS-DEL-LINE*/
         .messageUser__checkboxContainer {
             display: none;
         }
@@ -202,7 +204,7 @@
         .messageUser__dateEdit {
             margin-bottom: 0.3375rem;
         }
-    }
+    } /*JSCSS-DEL-LINE*/
 
 
     .tablesForum__cellAuthor .tablesForum__remainingAvatars,
