@@ -1,16 +1,17 @@
 /* ==UserStyle==
 @name           UI_2023_JVC
 @namespace      https://www.jeuxvideo.com
-@version        8.1.6
+@version        8.2.6
 @updateURL      https://userstyles.world/api/style/17542.user.css
 @description    Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC).
 @author         Atlantis
 @license        CC0-1.0
 @preprocessor   stylus
 
-@var checkbox bar_top_mov      "Barre edition en haut (reversible)" 1
+@var checkbox back_subjects    "Bouton liste des sujets en bas  (reversible)" 1
+@var checkbox bar_top_mov      "Formulaire texte barre en haut (reversible)" 1
+@var checkbox bloc_top_mov     "Boutons Bloc forum en haut (reversible)" 1
 @var checkbox hide__topInfo    "Masquer le bandeau harcelement (reversible)" 1
-@var checkbox bar_top_bloc     "Barre bloc forum en haut (reversible)" 1
 
 ==/UserStyle== */
 @-moz-document domain("www.jeuxvideo.com") {  /* JSCSS-DEL-LINE */
@@ -186,7 +187,7 @@
     }
     /* JSCSS-DEL-BLOCK-END */
 
-    if (bar_top_bloc) { /* JSCSS-DEL-LINE */
+    if (bloc_top_mov) { /* JSCSS-DEL-LINE */
         .messageUser__checkboxContainer {
             display: none;
         }
@@ -206,6 +207,32 @@
         }
     } /* JSCSS-DEL-LINE */
 
+    /* JSCSS-DEL-BLOCK-START */
+    if (back_subjects) {
+        #page-messages-forum .container__navTop {
+            order : 1;
+            margin-bottom: 1rem;
+        }
+
+        #page-messages-forum #forums-settings-app {
+            margin-left: auto;
+        }
+
+        #page-messages-forum .userParameters {
+            border : none;
+        }
+
+        #page-messages-forum .buttonIconSwitch--isActive {
+            color : inherit;  
+        }
+
+        @media (min-width: 612px) {
+            #page-messages-forum .backTo__icon {
+                visibility : hidden;
+            }
+        }
+    }
+    /* JSCSS-DEL-BLOCK-END */
 
     .tablesForum__cellAuthor .tablesForum__remainingAvatars,
     .tablesForum__cellAuthor .tablesForum__separator {
@@ -271,7 +298,7 @@
         width: 1.2rem;
     }
 
-    /* --FIX -- STA --- --*/
+    /* --FIX -- STA ------*/
     .messageUser > .messageUser__groupFills {
         display : none;
     }
