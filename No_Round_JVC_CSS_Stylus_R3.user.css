@@ -1,14 +1,14 @@
 /* ==UserStyle==
 @name           UI_2023_JVC
 @namespace      https://www.jeuxvideo.com
-@version        8.2.7
+@version        8.2.8
 @updateURL      https://userstyles.world/api/style/17542.user.css
 @description    Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC).
 @author         Atlantis
 @license        CC0-1.0
 @preprocessor   stylus
 
-@var checkbox back_subjects    "Bouton liste des sujets en bas  (reversible)" 1
+@var checkbox back_subjects    "Bouton liste des sujets en bas  (reversible)" 0
 @var checkbox bar_top_mov      "Formulaire texte barre en haut (reversible)" 1
 @var checkbox bloc_top_mov     "Boutons Bloc forum en haut (reversible)" 1
 @var checkbox hide__topInfo    "Masquer le bandeau harcelement (reversible)" 1
