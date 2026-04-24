@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           UI_2023_JVC
 @namespace      https://www.jeuxvideo.com
-@version        8.3.6
+@version        8.3.7
 @updateURL      https://userstyles.world/api/style/17542.user.css
 @description    Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC).
 @author         Atlantis
@@ -92,7 +92,6 @@
     .form-select,
     .form-control,
     .report__select,
-    .listActions__textarea,
     .report__textarea {
         border-radius: 0.4rem;
     }
@@ -216,8 +215,15 @@
             font-size: 1rem;
         }
 
-        #page-messages-forum .container__navTop .backTo::after {
-            content : none;
+        #page-messages-forum .container__navTop .backTo {
+            margin-left: 1rem;
+        }
+        #page-messages-forum .container__navTop .icon-arrow-left2,
+        #page-messages-forum .container__navTop .backTo__text {
+            color: var(--jv-blue-gray-color) ;
+        }
+        #page-messages-forum .container__navTop .icon-arrow-left2:before {
+            content: '';
         }
 
         #page-messages-forum #forums-settings-app {
@@ -232,11 +238,6 @@
             color : inherit;  
         }
 
-        @media (min-width: 612px) {
-            #page-messages-forum .backTo__icon {
-                visibility : hidden;
-            }
-        }
     }
     /* JSCSS-DEL-BLOCK-END */
 
