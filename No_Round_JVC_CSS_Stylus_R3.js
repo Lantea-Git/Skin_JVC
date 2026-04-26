@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UI_2023_JVC_JS
 // @namespace    UI_2023_JVC_JS
-// @version      8.4.1
+// @version      8.4.5
 // @description  Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC). (JS).
 // @author       Atlantis
 // @match        *://www.jeuxvideo.com/*
@@ -24,19 +24,31 @@ style.textContent = `
         border-radius: 5.5px;
     }
 
-    .dropdownCustom__list,
-    #mp .dropdown-menu {
-        border-radius : 0.4rem;
-    }
-
     .buttonsNavbar {
         box-shadow: none;
+        backdrop-filter: none;
         border-radius: 0;
         border: 0;
         background: none;
         border-bottom: 0.1rem solid var(--jv-border-color);
         max-height: 55px;
         padding-bottom : 15px;
+    }
+
+    @media (max-width: 611px) {
+        .buttonsNavbar--search .buttonsNavbar__button:nth-of-type(2)::after {
+            content : 'Rechercher';
+            font-weight: 700;
+        }
+
+        .buttonsNavbar__space {
+            visibility: hidden;
+        }
+    }
+
+    .dropdownCustom__list,
+    #mp .dropdown-menu {
+        border-radius : 0.4rem;
     }
 
     .topicResolve,
@@ -217,19 +229,23 @@ style.textContent = `
             grid-column: 1;
         }
 
+       .tablesForum__cellText::before {
+           content : none;
+       }
+
         .tablesForum--isModeCompact .tablesForum__bodyRow {
             --tables-forums-padding: 0.3125rem 1.5rem;
         }
 
-         .tablesForum__cellLink {
-             grid-column: 2;
-             grid-row: 3;
-             text-align: right;
-         }
+        .tablesForum__cellLink {
+            grid-column: 2;
+            grid-row: 3;
+            text-align: right;
+        }
 
-         .tablesForum__cellLink::before {
-             content : none;
-         }
+        .tablesForum__cellLink::before {
+            content : none;
+        }
     }
 
     .tablesForum__cellText,
@@ -262,7 +278,7 @@ style.textContent = `
         width: 1.2rem;
     }
 
-    /* --FIX -- STA ------*/
+    /* --FIX -- SPA ------*/
     .messageUser > .messageUser__groupFills {
         display : none;
     }
