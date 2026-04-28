@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UI_2023_JVC_JS
 // @namespace    UI_2023_JVC_JS
-// @version      8.6.5
+// @version      8.7.1
 // @description  Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC). (JS).
 // @author       Atlantis
 // @match        *://www.jeuxvideo.com/*
@@ -25,6 +25,40 @@ style.textContent = `
         border-radius: 5.5px;
     }
 
+    /*
+    .form-check-input:focus {
+        border-color: #5cb85c;
+        box-shadow: 0 0 0 .25rem rgba(92,184,92, 0.25);
+    }
+    .form-check-input:checked {
+        background-color: #5cb85c;
+        border-color: #5cb85c
+    }
+    */
+
+    .simpleButton {
+        border-radius: 0.4rem ;
+    }
+
+    .toast,
+    .alert {
+        border-radius: 0.3rem !important;
+    }
+
+    .form-select,
+    .form-control,
+    .report__select,
+    .listActions__textarea,
+    .report__textarea {
+        border-radius: 0.4rem;
+    }
+
+    .message__spoilLabel,
+    .message__spoilContent {
+        border-radius:0.2rem;
+    }
+
+    /*NEW NAV BAR*/
     .buttonsNavbar {
         box-shadow: none;
         backdrop-filter: none;
@@ -35,13 +69,12 @@ style.textContent = `
         max-height: 55px;
         padding-bottom : 15px;
     }
-
+    /*NEW NAV BAR MOBILE*/
     @media (max-width: 611px) {
         .buttonsNavbar--search .buttonsNavbar__button:nth-of-type(2)::after {
             content : 'Rechercher';
             font-weight: 700;
         }
-
         .buttonsNavbar__space {
             visibility: hidden;
         }
@@ -52,19 +85,13 @@ style.textContent = `
         border-radius : 0.4rem;
     }
 
+    /* MENU TOPIC */
     .topicResolve,
     .userParameters {
         border-radius: 0.4rem;
     }
 
-    .link-plus-de-comm {
-        border-radius: 0.3rem !important;
-    }
-
-    .valider-modif-profil {
-        border-radius: 0.3rem;
-    }
-
+    /*NEW NAV BAR FIXE*/
     #js-list-message-tools-actions,
     #js-list-topics-tools-actions {
         position: static;
@@ -76,15 +103,25 @@ style.textContent = `
         margin-bottom: 15px;
     }
 
-    .container__post > .container__postTitle {
-        display : none;
+    .forumSearchBar__form {
+        --search-border-radius: 0.3rem 0.3rem 0 0;
+    }
+    @media (min-width: 612px) {
+        .forumSearchBar__form {
+            --search-border-radius: 0.3rem;
+            box-shadow: none;
+            border-color: var(--jv-input-border-color) !important;
+        }
+    }
+    .searchBar__form {
+        border-radius: 0.4rem ;
     }
 
-    .toast,
-    .alert {
-        border-radius: 0.3rem !important;
+    #list-topics-search-result .lockInfo__icon {
+        visibility : hidden;
     }
 
+    /*HEADER*/
     .headerAccount__dropdownContainer {
         border-radius: 0.4rem !important;
     }
@@ -93,21 +130,13 @@ style.textContent = `
         border-radius: 0.5rem;
     }
 
-
+    /*SELECT FOFO*/
     .quickAccessButton {
         border-radius: 5.5px !important;
     }
 
     .card-img-top {
         border-radius: 0.4rem !important;
-    }
-
-    .form-select,
-    .form-control,
-    .report__select,
-    .listActions__textarea,
-    .report__textarea {
-        border-radius: 0.4rem;
     }
 
     .modalWrapper__main {
@@ -131,7 +160,6 @@ style.textContent = `
         color: var(--jv-text-hover-secondary);
     }
 
-
     #forums-info-app .sideCardForum__listItemAvatar {
         display: none;
     }
@@ -140,10 +168,54 @@ style.textContent = `
         font-size: 1.6rem;
     }
 
-    /* Forums */
-    .survey__removeSurvey,
-    .survey__addSurvey {
-        color : var(--jv-blue-gray-color)
+    .backTo,
+    .userCount__icon,
+    .userCount__number {
+        color: var(--jv-blue-gray-color);
+    }
+
+    .userCount__icon {
+        font-size : 1.1rem;
+    }
+
+    .surveyResults__icon,
+    .surveyResults__count {
+        color: var(--jv-blue-gray-color);
+    }
+
+    .surveyResults__toggleButton, 
+    .surveyResults__progressFill {
+        background: var(--jv-blue-gray-color);
+        border : none;
+    }
+
+    .sideCardForum__header {
+        border-radius: 0.3rem 0.3rem 0 0;
+        border: 0.0625rem solid var(--jv-border-color);
+        border-bottom : none;
+        background-color: var(--jv-bg-color-light);
+        padding: 0.15rem 0.7rem;
+    }
+
+    .sideCardForum__body {
+        border-radius: 0 0 0.3rem 0.3rem;
+    }
+
+    .card,
+    .surveyResults {
+        border-radius: 0.3rem !important;
+    }
+
+    @media (max-width: 999px) {
+        .container__main:nth-of-type(2) {
+            padding: 0 0.625rem;
+        }
+    }
+
+    @media (max-width: 999px) {
+        .sideCardForum {
+            padding: 0 0.625rem;
+        }
     }
 
     .survey__icon,
@@ -164,6 +236,15 @@ style.textContent = `
         border-radius: 0.4rem;
     }
 
+    /*FORMULAIRE*/
+    .survey__removeSurvey,
+    .survey__addSurvey {
+        color : var(--jv-blue-gray-color)
+    }
+
+    .container__post > .container__postTitle {
+        display : none; /*Repondre*/
+    }
 
     #input-topic-title ,
     .messageEditor__containerEdit {
@@ -192,8 +273,56 @@ style.textContent = `
         }
 
 
+    /*BLOC FORUM*/
+
+    .lockInfo {
+        border-radius: 0.3rem;
+    }
+
+    .bloc-message-forum,
+    .messageUser__card {
+        border-radius: 0.3rem;
+    }
+
+    .messageUser__card {
+        border: 0.0625rem solid var(--border-color);
+    }
+
+    /* --FIX -- SPA ------*/
+    .messageUser > .messageUser__groupFills {
+        display : none;
+    }
+    /* --FIX -- END ------*/
+
+    .messageUser .avatar {
+       width: 3.4rem;
+       height: 3.4rem;
+       border: 0;
+       padding: 0.1875rem;
+    }
+
+    .avatar--with-animation {
+       box-shadow: none;
+    }
+    
+    .messageUser__label {
+        font-weight : 500;
+        padding-bottom: 0.1rem;
+        font-size: 0.97rem;
+    }
+
+    .messageUser__level {
+        color : var(--jv-text-muted-color);
+        line-height: 1.1;
+    }
+
     .messageUser__checkboxContainer {
         display: none;
+    }
+
+    .messageUser__modalContainer > .messageUser__fills {
+        border-top-right-radius : 0.3rem;
+        border-top-left-radius : 0.3rem;
     }
 
     .messageUser__footer {
@@ -204,13 +333,21 @@ style.textContent = `
         right: 15px;
         border: none;
     }
-
     .messageUser__footer {
         gap : 9px;
+    }
+    .messageUser__footer {
+        height: 1.5rem;
     }
 
     .messageUser__dateEdit {
         margin-bottom: 0.3375rem;
+    }
+
+    .messageUser__card .messageUser__actionIcon {
+        font-size: 1.2rem;
+        height: 1.2rem;
+        width: 1.2rem;
     }
 
         .messageUser__actionIcon {
@@ -226,10 +363,10 @@ style.textContent = `
         }
 
         @media (min-width: 612px) {
-            .messageUser__footer {
+            .messageUser__footer,
+            .messageUser__groupFills {
                 gap : 6px !important;
             }
-
             .messageUser__modalContainer > .messageUser__fills {
                 gap : 6px;
             }
@@ -284,12 +421,12 @@ style.textContent = `
             background-position-x: -9.75rem;
         }
 
-
-
+    /* LISTE SUJET */
     .tablesForum__cellAuthor .tablesForum__remainingAvatars,
     .tablesForum__cellAuthor .tablesForum__separator {
         display: none !important;
     }
+
 
     /*TEMPLATE PETIT ECRAN -- FROM RISIBANK*/
     @media (min-width: 1200px) and (max-width: 1450px) { /* Max for fellback debou*/
@@ -348,22 +485,6 @@ style.textContent = `
         margin-bottom: 0;
     }
 
-    .messageUser__card .messageUser__actionIcon {
-        font-size: 1.2rem;
-        height: 1.2rem;
-        width: 1.2rem;
-    }
-
-    /* --FIX -- SPA ------*/
-    .messageUser > .messageUser__groupFills {
-        display : none;
-    }
-    /* --FIX -- END ------*/
-
-    .messageUser__footer {
-        height: 1.5rem;
-    }
-
     .topic-list {
         border-radius: 0.3rem;
     }
@@ -382,85 +503,12 @@ style.textContent = `
         color: var(--jv-blue-gray-color);
     }
 
-    .lockInfo,
-    .bloc-message-forum,
-    .messageUser__card {
-        border-radius: 0.3rem;
-    }
-    .messageUser__card {
-        border: 0.0625rem solid var(--border-color);
-    }
-
-    .messageUser .avatar {
-       width: 3.4rem;
-       height: 3.4rem;
-       border: 0;
-       padding: 0.1875rem;
-    }
-
-    .avatar--with-animation {
-       box-shadow: none;
-    }
-    
-    .messageUser__label {
-        font-weight : 500;
-        padding-bottom: 0.1rem;
-        font-size: 0.97rem;
-    }
-
-    .messageUser__level {
-        color : var(--jv-text-muted-color);
-        line-height: 1.1;
-    }
-
-
     .avatar--with-animation:before {
         background: var(--shadow-color);
         animation : none;
     }
 
-    .nouveau-msg > a {
-        border-radius: 0.3rem !important;
-    }
-
-    .bloc-pre-pagi-forum {
-        border-radius: 0rem;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        padding-left: 0;
-        padding-right: 0;
-        background-color: transparent;
-    }
-
-    .btn-lancer-rech {
-        border-top-right-radius: 0.3rem !important;
-        border-bottom-right-radius: 0.3rem !important;
-    }
-
-    .select-search {
-        border-top-left-radius: 0.3rem !important;
-        border-bottom-left-radius: 0.3rem !important;
-    }
-    .forumSearchBar__form {
-    --search-border-radius: 0.3rem 0.3rem 0 0;
-    }
-    @media (min-width: 612px) {
-        .forumSearchBar__form {
-            --search-border-radius: 0.3rem;
-            box-shadow: none;
-            border-color: var(--jv-input-border-color) !important;
-        }
-    }
-    .searchBar__form {
-        border-radius: 0.4rem ;
-    }
-
-    #list-topics-search-result .lockInfo__icon {
-        visibility : hidden;
-    }
-
-    /* Profil */
+    /* Legacy PROFIL */
     .fiche-abonne {
         border-radius: 0.3rem;
     }
@@ -497,10 +545,6 @@ style.textContent = `
         border-radius: 0.5rem;
     }
 
-    .simpleButton {
-        border-radius: 0.4rem ;
-    }
-
     .link-rediger-article {
         border-radius: 0.5rem ;
     }
@@ -509,16 +553,10 @@ style.textContent = `
         border-radius: 0.4rem ;
     }
 
-    /*
-    .form-check-input:focus {
-        border-color: #5cb85c;
-        box-shadow: 0 0 0 .25rem rgba(92,184,92, 0.25);
+    /* LEGACY PROFIL */
+    .valider-modif-profil {
+        border-radius: 0.3rem;
     }
-    .form-check-input:checked {
-        background-color: #5cb85c;
-        border-color: #5cb85c
-    }
-    */
 
     #blacklist li {
         border-radius : 0.4rem ;
@@ -533,6 +571,9 @@ style.textContent = `
     }
 
     /* MP */
+    .nouveau-msg > a {
+        border-radius: 0.3rem !important;
+    }
 
     #mp-menus {
         border-radius: 0.4rem;
@@ -550,7 +591,43 @@ style.textContent = `
         border-radius: 0.2rem !important;
     }
 
-    /* Pagination */
+    /* !! LEGACY !! */
+    .bloc-pre-pagi-forum {
+        border-radius: 0rem;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        padding-left: 0;
+        padding-right: 0;
+        background-color: transparent;
+    }
+
+    .btn-lancer-rech {
+        border-top-right-radius: 0.3rem !important;
+        border-bottom-right-radius: 0.3rem !important;
+    }
+
+    .select-search {
+        border-top-left-radius: 0.3rem !important;
+        border-bottom-left-radius: 0.3rem !important;
+    }
+
+     /* Legacy Com */
+    .link-plus-de-comm {
+        border-radius: 0.3rem !important;
+    }
+
+    /*top forum*/
+    .card__badge--counter {
+        border-radius: 0.4rem;
+    }
+
+    /*top card inherit of parent*/
+    .card > .card-header {
+        border-radius: 0;
+    }
+
+    /* LEGACY PAGINATION */
     .bloc-pagi-default .page-active {
         border-radius: 0.3rem;
     }
@@ -573,73 +650,6 @@ style.textContent = `
         justify-content: center;
     }
     /* //LEGACY END// */
-
-    /* Cards */
-
-    /*top forum*/
-    .card__badge--counter {
-        border-radius: 0.4rem;
-    }
-
-    /*top card inherit of parent*/
-    .card > .card-header {
-        border-radius: 0;
-    }
-
-    .backTo,
-    .userCount__icon,
-    .userCount__number {
-        color: var(--jv-blue-gray-color);
-    }
-
-    .userCount__icon {
-        font-size : 1.1rem;
-    }
-
-    .surveyResults__icon,
-    .surveyResults__count {
-        color: var(--jv-blue-gray-color);
-    }
-
-    .surveyResults__toggleButton, 
-    .surveyResults__progressFill {
-        background: var(--jv-blue-gray-color);
-        border : none;
-    }
-
-    .sideCardForum__header {
-        border-radius: 0.3rem 0.3rem 0 0;
-        border: 0.0625rem solid var(--jv-border-color);
-        border-bottom : none;
-        background-color: var(--jv-bg-color-light);
-        padding: 0.15rem 0.7rem;
-    }
-
-    .sideCardForum__body {
-        border-radius: 0 0 0.3rem 0.3rem;
-    }
-
-    .card,
-    .surveyResults {
-        border-radius: 0.3rem !important;
-    }
-
-    .message__spoilLabel,
-    .message__spoilContent {
-        border-radius:0.2rem;
-    }
-
-    @media (max-width: 999px) {
-        .container__main:nth-of-type(2) {
-            padding: 0 0.625rem;
-        }
-    }
-
-    @media (max-width: 999px) {
-        .sideCardForum {
-            padding: 0 0.625rem;
-        }
-    }
 
     /*homepage = card--default*/
     .card--cover .card-img,
