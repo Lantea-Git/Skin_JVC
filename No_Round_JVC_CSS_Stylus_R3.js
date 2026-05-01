@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UI_2023_JVC_JS
 // @namespace    UI_2023_JVC_JS
-// @version      9.0.2
+// @version      9.1.0
 // @description  Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC). (JS).
 // @author       Atlantis
 // @match        *://www.jeuxvideo.com/*
@@ -171,7 +171,7 @@ style.textContent = `
     .backTo,
     .userCount__icon,
     .userCount__number {
-        color: var(--jv-blue-gray-color);
+        color: var(--jv-text-color);
     }
 
     .userCount__icon {
@@ -189,16 +189,20 @@ style.textContent = `
         border : none;
     }
 
+    .sideCardForum {
+        background-color: var(--jv-block-bg-color);
+    }
     .sideCardForum__header {
         border-radius: 0.3rem 0.3rem 0 0;
         border: 0.0625rem solid var(--jv-border-color);
         border-bottom : none;
-        background-color: var(--jv-bg-color-light);
+        /* background-color: var(--jv-bg-color-light); */
+        background-color: rgba(0, 0, 0, 0.075);
         padding: 0.15rem 0.7rem;
     }
-
     .sideCardForum__body {
         border-radius: 0 0 0.3rem 0.3rem;
+        border-top: none;
     }
 
     .card,
@@ -306,7 +310,11 @@ style.textContent = `
     .avatar--with-animation {
        box-shadow: none;
     }
-    
+    .avatar--with-animation:before {
+        background: var(--shadow-color);
+        animation : none;
+    }
+
     .messageUser__label {
         font-weight : 500;
         padding-bottom: 0.1rem;
@@ -457,7 +465,6 @@ style.textContent = `
 
     /*TEMPLATE MOBILE*/
     @media (max-width: 611.98px) {
-
         .tablesForum__cellText {
             grid-column: 1;
         }
@@ -504,27 +511,33 @@ style.textContent = `
         border-radius: 0;
     }
 
-    .topic-list {
-        border-radius: 0.3rem;
-    }
-
     #forums-info-app + .sideCardForum {
         display : none;
     }
 
+    .sideCardForum__listItem,
+    .sideCardForum__subtitle,
+    .sideCardForum__listItemLink {
+        font-size: 0.9rem;
+    }
     .sideCardForum__listItem {
         margin-bottom: 0.25rem;
         line-height: 1.5;
+    }
+    a.sideCardForum__listItemLink:hover {
+        color: var(--jv-text-hover-secondary);
+    }
+
+    .sideCardForum__listItem .sideCardForum__action {
+        visibility : hidden;
+    }
+    .sideCardForum__listItem:hover .sideCardForum__action {
+        visibility : visible;
     }
 
     .sideCardForum__listItemCount {
         border-color: 0.0625rem solid var(--jv-blue-gray-color);
         color: var(--jv-blue-gray-color);
-    }
-
-    .avatar--with-animation:before {
-        background: var(--shadow-color);
-        animation : none;
     }
 
     /* Legacy PROFIL */
@@ -611,6 +624,10 @@ style.textContent = `
     }
 
     /* !! LEGACY !! */
+    .topic-list {
+        border-radius: 0.3rem;
+    }
+
     .bloc-pre-pagi-forum {
         border-radius: 0rem;
         border-top: none;
