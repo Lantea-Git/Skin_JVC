@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UI_2023_JVC_JS
 // @namespace    UI_2023_JVC_JS
-// @version      8.8.2
+// @version      9.0.0
 // @description  Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC). (JS).
 // @author       Atlantis
 // @match        *://www.jeuxvideo.com/*
@@ -183,7 +183,7 @@ style.textContent = `
         color: var(--jv-blue-gray-color);
     }
 
-    .surveyResults__toggleButton, 
+    .surveyResults__toggleButton,
     .surveyResults__progressFill {
         background: var(--jv-blue-gray-color);
         border : none;
@@ -207,7 +207,7 @@ style.textContent = `
     }
 
     @media (max-width: 999px) {
-        .container__main:nth-of-type(2) {
+        .container__main:last-of-type {
             padding: 0 0.625rem;
         }
     }
@@ -287,6 +287,7 @@ style.textContent = `
 
     .messageUser__card {
         border: 0.0625rem solid var(--border-color);
+        padding: 0.75rem 0.75rem 0;
     }
 
     /* --FIX -- SPA ------*/
@@ -321,7 +322,7 @@ style.textContent = `
         display: none;
     }
 
-    .messageUser__fills {
+    .messageUser__modalContainer > .messageUser__fills {
         border-radius : 0.3rem;
     }
     @media (max-width: 611px) {
@@ -336,22 +337,53 @@ style.textContent = `
         width: 1.2rem;
     }
 
+
+        @media (min-width: 612px) {
+            .messageUser__moreButton + .messageUser__modalContainer {
+                position : relative;
+                transform : none;
+                opacity : 1;
+            }
+
+            .messageUser__modalContainer > .messageUser__fills {
+                display: flex;
+                flex-direction: row-reverse;
+                background : none;
+                box-shadow : none;
+                border : none;
+                min-width: 0;
+                margin-left : 0px;
+                padding : 0px;
+                overflow: visible !important;
+            }
+
+            .messageUser__headerActions,
+            .messageUser__modalContainer > .messageUser__fills  {
+                gap: 6px !important;
+            }
+        
+            .messageUser__action {
+                padding : 0 !important;
+                background : none ! important;
+            }
+
+            .messageUser__moreButton,
+            .messageUser__actionLabel {
+                  display : none !important;
+            }
+
+            .messageUser__modalContainer .loader {
+                left: -8px !important;
+                top: -8px !important;
+            }
+        }
+
         .messageUser__actionIcon {
             opacity : 0.33;
         }
 
         .messageUser__actionIcon:hover {
             opacity : 1;
-        }
-
-        @media (min-width: 612px) {
-            .messageUser__headerActions,
-            .messageUser__groupFills {
-                gap : 6px !important;
-            }
-            .messageUser__modalContainer > .messageUser__fills {
-                gap : 6px;
-            }
         }
 
         .messageUser__actionIcon::before {
