@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UI_2023_JVC_JS
 // @namespace    UI_2023_JVC_JS
-// @version      9.5.3
+// @version      9.5.5
 // @description  Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC). (JS).
 // @author       Atlantis
 // @match        *://www.jeuxvideo.com/*
@@ -47,6 +47,11 @@ style.textContent = `
 
     .message__urlImg {
         border-radius: 0;
+    }
+    .message__urlImgSticker {
+        height: auto;
+        width: 90px;
+        min-width: unset;
     }
 
     .form-select,
@@ -231,7 +236,7 @@ style.textContent = `
     }
 
     @media (max-width: 999px) {
-        .container__main:nth-of-type(n+2) { /*2eme a dernier element / FORMULAIRE */
+        .container__main:nth-of-type(n+2) { /*2eme à dernier element / FORMULAIRE */
             padding: 0 0.625rem;
         }
     }
@@ -401,7 +406,7 @@ style.textContent = `
         }
 
 
-    /*BLOC FORUM*/
+    /*BLOC FORUM CARD USER*/
 
     .lockInfo {
         border-radius: 0.3rem;
@@ -469,6 +474,7 @@ style.textContent = `
     }
 
 
+	    /* BOUTON CARD */
         @media (min-width: 612px) {
             .messageUser__moreButton + .messageUser__modalContainer {
                 position : relative;
@@ -573,6 +579,8 @@ style.textContent = `
         .tablesForum__bodyRow .messageUser__actionIcon.icon-trash {
             background-position-x: -9.75rem;
         }
+        /* END BOUTONS CARD*/
+
 
     /* Legacy PROFIL */
     .fiche-abonne {
