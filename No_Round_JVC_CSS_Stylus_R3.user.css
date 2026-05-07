@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           UI_2023_JVC
 @namespace      https://www.jeuxvideo.com
-@version        9.5.6
+@version        9.6.1
 @updateURL      https://userstyles.world/api/style/17542.user.css
 @description    Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC).
 @author         Atlantis
@@ -522,47 +522,48 @@
 
 
     if (bloc_old_btn) { /* JSCSS-DEL-LINE */
-	    /* BOUTON CARD */
-        @media (min-width: 612px) {
-            .messageUser__moreButton + .messageUser__modalContainer {
-                position : relative;
-                transform : none;
-                opacity : 1;
-                transition : none;
-            }
+        /* BOUTON CARD */
+        .messageUser__moreButton + .messageUser__modalContainer {
+            z-index: 1; /*Force Mobile*/
+            position : relative;
+            transform : none;
+            opacity : 1;
+            transition : none;
+        }
 
-            .messageUser__modalContainer > .messageUser__fills {
-                display: flex;
-                flex-direction: row-reverse;
-                background : none;
-                box-shadow : none;
-                border : none;
-                min-width: 0;
-                margin-left : 0px;
-                padding : 0px;
-                overflow: visible !important;
-            }
+        .messageUser__modalContainer > .messageUser__fills {
+            position: relative; /*Force Mobile*/
+            display: flex;
+            flex-direction: row-reverse;
+            background : none;
+            box-shadow : none;
+            border : none;
+            min-width: 0;
+            margin-left : 0px;
+            padding : 0px;
+            overflow: visible !important;
+        }
 
-            .messageUser__headerActions,
-            .messageUser__inlineActions,
-            .messageUser__modalContainer > .messageUser__fills  {
-                gap: 6px !important;
-            }
+        .messageUser__headerActions,
+        .messageUser__inlineActions,
+        .messageUser__modalContainer > .messageUser__fills  {
+            gap: 6px !important;
+        }
 
-            .messageUser__action {
-                padding : 0 !important;
-                background : none !important;
-            }
+        .messageUser__action {
+            padding : 0 !important;
+            background : none !important;
+        }
 
-            .messageUser__moreButton,
-            .messageUser__actionLabel {
-                  display : none !important;
-            }
+        .messageUser__moreButton,
+        .messageUser__cancel, /*Force Mobile*/
+        .messageUser__actionLabel {
+              display : none !important;
+        }
 
-            .messageUser__modalContainer .loader {
-                left: -8px !important;
-                top: -8px !important;
-            }
+        .messageUser__modalContainer .loader {
+            left: -8px !important;
+            top: -8px !important;
         }
 
         .messageUser__actionIcon {
