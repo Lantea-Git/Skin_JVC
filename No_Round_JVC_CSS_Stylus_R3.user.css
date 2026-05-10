@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           UI_2023_JVC
 @namespace      https://www.jeuxvideo.com
-@version        9.6.1
+@version        10.3.0
 @updateURL      https://userstyles.world/api/style/17542.user.css
 @description    Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC).
 @author         Atlantis
@@ -276,12 +276,13 @@
         }
     }
 
-    /* JSCSS-DEL-BLOCK-START */
-    if (back_subjects) {
-        #page-messages-forum .container__navTop {
-            order : 1;
-            margin-bottom: 1rem;
-            font-size: 1rem;
+    if (back_subjects) {  /* JSCSS-DEL-LINE */
+        #page-messages-forum:not(.jvchat-root) .container__main {
+            position : relative;
+        }
+        #page-messages-forum .container__navTop .backTo {
+            position : absolute;
+            bottom : 10px;
         }
 
         #page-messages-forum .container__navTop .backTo {
@@ -295,25 +296,17 @@
         #page-messages-forum .container__navTop .icon-arrow-left2:before {
             content: '';
         }
-
-        #page-messages-forum #forums-settings-app {
-            margin-left: auto;
-        }
-
         #page-messages-forum .container__navTop .backTo::after {
             content : none;
         }
-
-        #page-messages-forum .userParameters {
-            border : none;
+        #page-messages-forum .container__navTop .backTo__text {
+             display: block; /*FORCE DISPLAY MOBILE*/
         }
 
-        #page-messages-forum .buttonIconSwitch--isActive {
-            color : inherit;  
+        #page-messages-forum .container__messages ~ .container__pagination {
+            margin-bottom: 2.2rem;
         }
-
-    }
-    /* JSCSS-DEL-BLOCK-END */
+    }  /* JSCSS-DEL-LINE */
 
     /*TEMPLATE MOBILE*/
     @media (max-width: 611.98px) {
@@ -548,6 +541,13 @@
         .messageUser__inlineActions,
         .messageUser__modalContainer > .messageUser__fills  {
             gap: 6px !important;
+        }
+        @media (max-width: 611px) { /* Mobile */
+            .messageUser__headerActions,
+            .messageUser__inlineActions,
+            .messageUser__modalContainer > .messageUser__fills  {
+                gap: 8px !important;
+            }
         }
 
         .messageUser__action {
