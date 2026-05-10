@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UI_2023_JVC_JS
 // @namespace    UI_2023_JVC_JS
-// @version      9.6.1
+// @version      10.3.0
 // @description  Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC). (JS).
 // @author       Atlantis
 // @match        *://www.jeuxvideo.com/*
@@ -276,6 +276,35 @@ style.textContent = `
         }
     }
 
+        #page-messages-forum:not(.jvchat-root) .container__main {
+            position : relative;
+        }
+        #page-messages-forum .container__navTop .backTo {
+            position : absolute;
+            bottom : 10px;
+        }
+
+        #page-messages-forum .container__navTop .backTo {
+            margin-left: 1rem;
+        }
+        #page-messages-forum .container__navTop .icon-arrow-left2,
+        #page-messages-forum .container__navTop .backTo__text {
+            color: var(--jv-text-muted-color);
+            font-weight: 500;
+        }
+        #page-messages-forum .container__navTop .icon-arrow-left2:before {
+            content: '';
+        }
+        #page-messages-forum .container__navTop .backTo::after {
+            content : none;
+        }
+        #page-messages-forum .container__navTop .backTo__text {
+             display: block; /*FORCE DISPLAY MOBILE*/
+        }
+
+        #page-messages-forum .container__messages ~ .container__pagination {
+            margin-bottom: 2.2rem;
+        }
 
     /*TEMPLATE MOBILE*/
     @media (max-width: 611.98px) {
@@ -500,6 +529,13 @@ style.textContent = `
         .messageUser__inlineActions,
         .messageUser__modalContainer > .messageUser__fills  {
             gap: 6px !important;
+        }
+        @media (max-width: 611px) { /* Mobile */
+            .messageUser__headerActions,
+            .messageUser__inlineActions,
+            .messageUser__modalContainer > .messageUser__fills  {
+                gap: 8px !important;
+            }
         }
 
         .messageUser__action {
