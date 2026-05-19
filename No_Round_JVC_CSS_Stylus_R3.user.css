@@ -1,17 +1,20 @@
 /* ==UserStyle==
 @name           UI_2023_JVC
 @namespace      https://www.jeuxvideo.com
-@version        10.9.0
-@updateURL      https://userstyles.world/api/style/17542.user.css
+@version        11.0.0
 @description    Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC).
 @author         Atlantis
 @license        CC0-1.0
 @preprocessor   stylus
 
-@var checkbox back_subjects    "Bouton liste des sujets en bas  (reversible)" 1
-@var checkbox bar_top_mov      "Formulaire texte barre en haut (reversible)" 1
-@var checkbox bloc_old_btn     "Anciens boutons bloc forum (reversible)" 1
-@var checkbox hide__topInfo    "Masquer le bandeau harcelement (reversible)" 1
+@var select   bloc_old_btn     "Anciens boutons bloc forum (reversible)" {
+    "Oui & Masquer MP ✉︎ *": "2" ,
+    "Oui": "1" ,
+    "Non": "0",
+}
+@var checkbox bar_top_mov      "Formulaire bouton edition en haut (reversible)" 1
+@var checkbox hide__topInfo    "Form Masquer bandeau harcelement (reversible)" 1
+@var checkbox back_subjects    "Bouton liste des sujets en bas (reversible)" 1
 
 ==/UserStyle== */
 @-moz-document domain("www.jeuxvideo.com") {  /* JSCSS-DEL-LINE */
@@ -446,8 +449,8 @@
     }
     /* JSCSS-DEL-BLOCK-END */
 
-    /*BLOC FORUM CARD USER*/
 
+    /*BLOC FORUM CARD USER*/
     .lockInfo {
         border-radius: 0.3rem;
     }
@@ -514,7 +517,7 @@
     }
 
 
-    if (bloc_old_btn) { /* JSCSS-DEL-LINE */
+    if (bloc_old_btn >= 1) { /* JSCSS-DEL-LINE */
         /* BOUTON CARD */
         .messageUser__moreButton + .messageUser__modalContainer {
             z-index: 1; /*Force Mobile*/
@@ -631,6 +634,13 @@
         /* END BOUTONS CARD*/
     } /* JSCSS-DEL-LINE */
 
+    /* JSCSS-DEL-BLOCK-START */
+    if (bloc_old_btn == 2) { /* JSCSS-DEL-LINE */
+       .messageUser__fills a.messageUser__action {
+            display :none;
+        }
+    }
+    /* JSCSS-DEL-BLOCK-END */
 
     /* Legacy PROFIL */
     .fiche-abonne {
