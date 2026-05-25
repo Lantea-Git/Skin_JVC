@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           UI_2023_JVC
 @namespace      https://www.jeuxvideo.com
-@version        11.6.0
+@version        11.7.0
 @description    Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC).
 @author         Atlantis
 @license        CC0-1.0
@@ -374,7 +374,7 @@
     }
 
     .sideCardForum__listItemCount {
-        border-color: 0.0625rem solid var(--jv-blue-gray-color);
+        border: none;
         color: var(--jv-blue-gray-color);
     }
 
