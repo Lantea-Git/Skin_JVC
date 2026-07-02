@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           UI_2023_JVC
 @namespace      https://www.jeuxvideo.com
-@version        12.2.0
+@version        12.6.0
 @description    Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC).
 @author         Atlantis
 @license        CC0-1.0
@@ -58,6 +58,7 @@
     }
 
     .form-select,
+    .panel__input,
     .form-control,
     .report__select,
     .listActions__textarea,
