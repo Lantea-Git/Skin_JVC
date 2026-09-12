@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Clean_Pub_Risi_JVC
 // @namespace    Clean_Pub_Risi_JVC
-// @version      7.6.0
+// @version      7.7.0
 // @description  Vire les onglets secondaires dans risibank.
 // @author       Atlantis
 // @match        *://risibank.fr/embed*
@@ -31,6 +31,11 @@ style.textContent = `
     .risibank-tile > .bg-gradient-to-b, 
     .risibank-tile > .bg-gradient-to-br {
         background-image: none;
+    }
+
+    .risibank-tile,
+    .risibank-tile-image {
+         border-radius : 0 !important;
     }
 
     nav > a[href^="https://discord.com/"],
