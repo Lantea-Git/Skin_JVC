@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           UI_2023_JVC
 @namespace      https://www.jeuxvideo.com
-@version        17.0.0
+@version        17.1.0
 @description    Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC).
 @author         Atlantis
 @license        CC0-1.0
@@ -22,8 +22,7 @@
 
     /* CODE */
 
-    /* JSCSS-DEL-BLOCK-START */
-    if (legacy_colors) {
+    if (legacy_colors) { /* JSCSS-DEL-LINE */
         /*Legacy Color text*/
         .jv-gaming,
         .theme-light .jv-gaming {
@@ -49,8 +48,7 @@
                 --jv-text-hover-primary: #5596f6;
             }
         }
-    }
-    /* JSCSS-DEL-BLOCK-END */
+    } /* JSCSS-DEL-LINE */
 
 
     /* Buttons */
