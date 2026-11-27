@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           UI_2023_JVC
 @namespace      https://www.jeuxvideo.com
-@version        16.3.0
+@version        17.0.0
 @description    Enleve les border radius abusifs de la mise à jour à jour décembre 2023 (JVC).
 @author         Atlantis
 @license        CC0-1.0
@@ -12,6 +12,7 @@
     "Oui": "1" ,
     "Non": "0",
 }
+@var checkbox legacy_colors     "Couleur legacy (2024)" 1
 @var checkbox bar_top_mov      "Formulaire bouton edition en haut" 1
 @var checkbox hide__topInfo    "Form Masquer bandeau harcelement" 1
 @var checkbox back_subjects    "Bouton liste des sujets en bas" 1
@@ -20,27 +21,37 @@
 @-moz-document domain("www.jeuxvideo.com") {  /* JSCSS-DEL-LINE */
 
     /* CODE */
-    
-    /*Legacy Color text*/
-    .jv-gaming,
-    .theme-light .jv-gaming {
-        --jv-link-color: #0160ee;
-        --jv-text-primary: #0160ee;
-        --jv-text-hover-primary: #014cbb;
-    }
 
-    .theme-dark .jv-gaming {
-        --jv-link-color: #7dc3f7;
-        --jv-text-primary: #3d87f5;
-        --jv-text-hover-primary: #5596f6;
-    }
-    @media (prefers-color-scheme: dark) {
-            .jv-gaming {
+    /* JSCSS-DEL-BLOCK-START */
+    if (legacy_colors) {
+        /*Legacy Color text*/
+        .jv-gaming,
+        .theme-light .jv-gaming {
+            --jv-bg-color: #f1f2f3;
+            --jv-border-color: #d6d8dc;
+        }
+
+        .jv-gaming,
+        .theme-light .jv-gaming {
+            --jv-link-color: #0160ee;
+            --jv-text-primary: #0160ee;
+            --jv-text-hover-primary: #014cbb;
+        }
+        .theme-dark .jv-gaming {
             --jv-link-color: #7dc3f7;
             --jv-text-primary: #3d87f5;
             --jv-text-hover-primary: #5596f6;
         }
+        @media (prefers-color-scheme: dark) {
+                .jv-gaming {
+                --jv-link-color: #7dc3f7;
+                --jv-text-primary: #3d87f5;
+                --jv-text-hover-primary: #5596f6;
+            }
+        }
     }
+    /* JSCSS-DEL-BLOCK-END */
+
 
     /* Buttons */
     .btn,
